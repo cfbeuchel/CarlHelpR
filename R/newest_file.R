@@ -1,3 +1,13 @@
+#' Find The Newest File.
+#'
+#' Look for a file in the working directory or a subfolder and return a character string with the newest version of the file matching the queried character string.
+#'
+#' @param look_for Character string with the name, or part of the name, of the file to look for
+#'
+#' @param folder Specify the subfolder to look for the file for
+#'
+#' @export
+
 # newest file of given name
 newest_file <- function(look_for = NA, folder = NA) {
 
@@ -31,7 +41,7 @@ newest_file <- function(look_for = NA, folder = NA) {
   files.ordered <- files.detailed[with(files.detailed, order(as.POSIXct(mtime))), ]
 
   # get the newest file from the list
-  files.newest <- rownames(tail(files.detailed, n = 1))
+  files.newest <- rownames(utils::tail(files.detailed, n = 1))
 
   # return the newest file
   return(files.newest)

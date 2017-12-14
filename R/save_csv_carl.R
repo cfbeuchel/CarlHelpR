@@ -1,3 +1,19 @@
+#' Custom save to .csv function
+#'
+#' This function saves data.tables or data.frames as .csv in the root working directory or a specified subfolder.
+#' Additionally the current date is automatically included in the file name.
+#'
+#' @param file The data.table or data.frame to be saved.
+#'
+#' @param file_name Character string that specifies the name the saved file should have
+#' The date of creation and the .csv ending are added automatically
+#'
+#' @param subfolder A character string without "/" giving the subfolder the file shall be saved in.
+#'
+#' @param create_subfolder Given a subfolder, setting this to TRUE will create a new directory with the name given in subfolder and will stop if set to FALSE
+#'
+#' @export
+
 save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subfolder = F) {
 
   # check if data.table is
@@ -42,7 +58,7 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
   }
 
   # save file as .csv
-  write.table(x = file,
+  utils::write.table(x = file,
               file = paste0(save_designation,
                             format(Sys.time(), '%y%m%d'),
                             "_", file_name, ".csv"),
