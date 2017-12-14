@@ -7,6 +7,21 @@
 venn4(x1, y1, z1, w1, mytitle = "4-Way Venn Diagram", mylabels = NA,
   plotte = T)
 }
+\arguments{
+\item{x1}{first vector to be matched}
+
+\item{y1}{second vector to be matched}
+
+\item{z1}{third vector to be matched}
+
+\item{w1}{third vector to be matched}
+
+\item{mytitle}{Title of the plot}
+
+\item{mylabels}{Labels for plotting}
+
+\item{plotte}{...}
+}
 \description{
 Plot a non-proportional 4-Way Venn Diagram.
 This function is from the package sytemPipeR found here:

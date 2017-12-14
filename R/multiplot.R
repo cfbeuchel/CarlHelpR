@@ -4,13 +4,15 @@
 #'
 #' Source: http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/
 #'
-#' @param plotlist
+#' @param plotlist ...
 #'
-#' @param file
+#' @param file ...
 #'
-#' @param cols
+#' @param cols ...
 #'
-#' @param layout
+#' @param layout ...
+#'
+#' @param ... ...
 #'
 #' @export
 #'
@@ -25,7 +27,7 @@
 #' 3 will go all the way across the bottom.
 #' }
 
-multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
 
   # Make a list from the ... arguments and plotlist
   plots <- c(list(...), plotlist)

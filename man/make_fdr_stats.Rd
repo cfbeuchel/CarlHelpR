@@ -8,6 +8,8 @@ make_fdr_stats(pval, ...)
 }
 \arguments{
 \item{pval}{A list or vector of Pvalues to be passed to the fdrtool function}
+
+\item{...}{...}
 }
 \description{
 A wrapper to compute FDR for a list of pvalues.

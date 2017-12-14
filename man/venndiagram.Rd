@@ -9,6 +9,37 @@ venndiagram(x = x, y = y, z = z, w = w, unique = T,
   lcol = 1, tcol = 1, diacol = 1, plot = T, type = "3",
   printsub = TRUE, ...)
 }
+\arguments{
+\item{x}{First vector to be matched}
+
+\item{y}{Second vector to be matched}
+
+\item{z}{Third vector to be matched}
+
+\item{w}{Fouth vector to be matched}
+
+\item{unique}{...}
+
+\item{title}{Title to be displayed at the top of the plot}
+
+\item{labels}{Labels for each matched vector}
+
+\item{lines}{...}
+
+\item{lcol}{...}
+
+\item{tcol}{...}
+
+\item{diacol}{...}
+
+\item{plot}{...}
+
+\item{type}{...}
+
+\item{printsub}{...}
+
+\item{...}{...}
+}
 \description{
 Plot a non-proportional 2-Way, 3-Way or 4-Way Venn Diagram.
 This function is from the package sytemPipeR found here:

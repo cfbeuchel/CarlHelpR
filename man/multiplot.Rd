@@ -7,13 +7,15 @@
 multiplot(..., plotlist = NULL, file, cols = 1, layout = NULL)
 }
 \arguments{
-\item{plotlist}{}
+\item{...}{...}
 
-\item{file}{}
+\item{plotlist}{...}
 
-\item{cols}{}
+\item{file}{...}
 
-\item{layout}{}
+\item{cols}{...}
+
+\item{layout}{...}
 }
 \description{
 Plot any number of plots in one panel.

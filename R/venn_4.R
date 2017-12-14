@@ -8,6 +8,20 @@
 #'
 #' Please check the systemPipeR documentation for further details
 #'
+#' @param x1 first vector to be matched
+#'
+#' @param y1 second vector to be matched
+#'
+#' @param z1 third vector to be matched
+#'
+#' @param w1 third vector to be matched
+#'
+#' @param mytitle Title of the plot
+#'
+#' @param mylabels Labels for plotting
+#'
+#' @param plotte ...
+#'
 #' @export
 
 venn4 <- function(x1, y1, z1, w1, mytitle = "4-Way Venn Diagram", mylabels = NA, plotte = T) {

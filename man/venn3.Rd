@@ -7,6 +7,19 @@
 venn3(x1, y1, z1, mytitle = "3-Way Venn Diagram", mylabels = NA,
   plotte = T)
 }
+\arguments{
+\item{x1}{first vector to be matched}
+
+\item{y1}{second vector to be matched}
+
+\item{z1}{third vector to be matched}
+
+\item{mytitle}{Title of the plot}
+
+\item{mylabels}{Labels for plotting}
+
+\item{plotte}{...}
+}
 \description{
 Plot a non-proportional 3-Way Venn Diagram.
 This function is from the package sytemPipeR found here:

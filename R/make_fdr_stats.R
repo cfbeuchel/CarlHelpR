@@ -6,6 +6,8 @@
 #'
 #' @param pval A list or vector of Pvalues to be passed to the fdrtool function
 #'
+#' @param ... ...
+#'
 #' @export
 
 # summarize the results from the fdrtool (Korbinian)

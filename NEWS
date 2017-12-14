@@ -1,7 +1,13 @@
-CarlHelpR 0.0.2 (Release date: Dezember 14th, 2017)
+CarlHelpR 0.0.21 (Release date: Dezember 14th, 2017)
 =========
 
 Changes in this version:
+~~~~~~~~~
+ * add function show_NA
+ * improve roxygen2 documentation sceleton to avoid pesky warnings
+ * make mental note to someday properly document venn_diagram functions or just use the existing one
+
+Changes in the last version:
 ~~~~~~~~~
  * Add functions
  * Create documentation

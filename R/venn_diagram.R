@@ -8,6 +8,37 @@
 #'
 #' Please check the systemPipeR documentation for further details
 #'
+#' @param x First vector to be matched
+#'
+#' @param y Second vector to be matched
+#'
+#' @param z Third vector to be matched
+#'
+#' @param w Fouth vector to be matched
+#'
+#' @param unique ...
+#'
+#' @param title Title to be displayed at the top of the plot
+#'
+#' @param labels Labels for each matched vector
+#'
+#' @param lines ...
+#'
+#' @param lcol ...
+#'
+#' @param tcol ...
+#'
+#' @param diacol ...
+#'
+#' @param plot ...
+#'
+#' @param type ...
+#'
+#' @param printsub ...
+#'
+#' @param ... ...
+#'
+#'
 #' @export
 
 venndiagram <- function(x = x, y = y, z = z, w = w, unique = T, title = "Venn Diagram", labels = c("x", "y", "z", "w"), lines = 1, lcol = 1, tcol = 1, diacol = 1, plot = T, type = "3",
