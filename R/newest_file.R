@@ -4,25 +4,38 @@
 #'
 #' @param look_for Character string with the name, or part of the name, of the file to look for
 #'
-#' @param folder Specify the subfolder to look for the file for
+#' @param folder Specify the subfolder to look for the file for when location is the working directory
+#'
+#' @param directory when Files are not in the working directory put the full path to the directory to search through here
 #'
 #' @export
 
 # newest file of given name
-newest_file <- function(look_for = NA, folder = NA) {
+newest_file <- function(look_for = NA, folder = NA, directory = NA) {
 
   if (is.na(look_for)) {
     stop("Please specifiy a character string to look_for")
   }
 
-  # check whether subfolder is given and define folder to scan through for files
-  if (is.na(folder)) {
-    designation <- here::here()
+  if (is.na(directory)) {
+
+      # check whether subfolder is given and define folder to scan through for files
+    if (is.na(folder)) {
+      designation <- here::here()
+    } else {
+
+      # remove any / in case I forgot that I don't need them
+      folder <- gsub(x = folder, pattern = "/", replacement = "")
+      designation <- paste0(here::here(), "/", folder, "/")
+    }
   } else {
 
-    # remove any / in case I forgot that I don't need them
-    folder <- gsub(x = folder, pattern = "/", replacement = "")
-    designation <- paste0(here::here(), "/", folder, "/")
+    # check if directory exists
+    stopifnot(dir.exists(directory))
+
+    # set the foreign directory as designation
+    designation <- directory
+
   }
 
   # list files matching look_for
