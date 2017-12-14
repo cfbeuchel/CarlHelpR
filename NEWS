@@ -3,10 +3,9 @@ CarlHelpR 0.0.22 (Release date: Dezember 14th, 2017)
 
 Changes in this version:
 ~~~~~~~~~
- * modify newest_file to also accept out-of-working-directory directories
+ * fix an error in save_csv_carl()
 
 Changes in the last version:
 ~~~~~~~~~
- * add function show_NA
- * improve roxygen2 documentation sceleton to avoid pesky warnings
- * make mental note to someday properly document venn_diagram functions or just use the existing one
+ * modify newest_file to also accept out-of-working-directory directories
+

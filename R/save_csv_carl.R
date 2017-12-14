@@ -17,7 +17,7 @@
 save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subfolder = F) {
 
   # check if data.table is
-  if(!is.na(all(file)) | data.table::is.data.table(file) == F){
+  if(!all(is.na(file)) | data.table::is.data.table(file) == F){
 
     # try to coerce file into data.table
     try(data.table::setDT(file), silent = T)
