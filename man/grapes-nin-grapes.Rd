@@ -2,7 +2,7 @@
 % Please edit documentation in R/not_in.R
 \name{\%nin\%}
 \alias{\%nin\%}
-\title{%nin%}
+\title{Reverse Value Matching.}
 \usage{
 x \%nin\% y
 }

@@ -1,4 +1,4 @@
-#' %nin%
+#' Reverse Value Matching.
 #'
 #' Returns a logical vector TRUE for elements of X not in Y
 #'
