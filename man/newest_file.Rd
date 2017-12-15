@@ -4,12 +4,14 @@
 \alias{newest_file}
 \title{Find The Newest File.}
 \usage{
-newest_file(look_for = NA, folder = NA)
+newest_file(look_for = NA, folder = NA, directory = NA)
 }
 \arguments{
 \item{look_for}{Character string with the name, or part of the name, of the file to look for}
 
-\item{folder}{Specify the subfolder to look for the file for}
+\item{folder}{Specify the subfolder to look for the file for when location is the working directory}
+
+\item{directory}{when Files are not in the working directory put the full path to the directory to search through here}
 }
 \description{
 Look for a file in the working directory or a subfolder and return a character string with the newest version of the file matching the queried character string.
