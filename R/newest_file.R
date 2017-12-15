@@ -4,14 +4,16 @@
 #'
 #' @param look_for Character string with the name, or part of the name, of the file to look for
 #'
-#' @param folder Specify the subfolder to look for the file for when location is the working directory
+#' @param subfolder Specify the subfolder to look for the file for when location is the working directory
 #'
 #' @param directory when Files are not in the working directory put the full path to the directory to search through here
+#'
+#' @param print_full If TRUE will print complete path to the file
 #'
 #' @export
 
 # newest file of given name
-newest_file <- function(look_for = NA, folder = NA, directory = NA) {
+newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_full = F) {
 
   if (is.na(look_for)) {
     stop("Please specifiy a character string to look_for")
@@ -20,13 +22,13 @@ newest_file <- function(look_for = NA, folder = NA, directory = NA) {
   if (is.na(directory)) {
 
       # check whether subfolder is given and define folder to scan through for files
-    if (is.na(folder)) {
+    if (is.na(subfolder)) {
       designation <- here::here()
     } else {
 
       # remove any / in case I forgot that I don't need them
-      folder <- gsub(x = folder, pattern = "/", replacement = "")
-      designation <- paste0(here::here(), "/", folder, "/")
+      subfolder <- gsub(x = subfolder, pattern = "/", replacement = "")
+      designation <- paste0(here::here(), "/", subfolder, "/")
     }
   } else {
 
@@ -55,6 +57,12 @@ newest_file <- function(look_for = NA, folder = NA, directory = NA) {
 
   # get the newest file from the list
   files.newest <- rownames(utils::tail(files.detailed, n = 1))
+
+  if (print_full == T) {
+    files.newest <- paste0(designation, files.newest)
+  } else if (print_full != T & print_full != F) {
+    stop("print_full must be TRUE or FALSE")
+  }
 
   # return the newest file
   return(files.newest)

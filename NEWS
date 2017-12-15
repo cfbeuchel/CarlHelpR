@@ -1,11 +1,11 @@
-CarlHelpR 0.0.24 (Release date: Dezember 15th, 2017)
+CarlHelpR 0.0.25 (Release date: Dezember 15th, 2017)
 =========
 
 Changes in this version:
 ~~~~~~~~~
- * small doc update for newest_file()
+ * add option print_full to newest_file to give out full path to file
 
 Changes in the last version:
 ~~~~~~~~~
- * fix an error in save_csv_carl()
+ * small doc update for newest_file()
 
