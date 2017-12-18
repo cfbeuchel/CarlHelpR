@@ -6,7 +6,7 @@
 #'
 #' @param subfolder Specify the subfolder to look for the file for when location is the working directory
 #'
-#' @param directory when Files are not in the working directory put the full path to the directory to search through here
+#' @param directory when Files are not in the working directory put the full path to the directory to search through here. Does not work with parameter subfolder
 #'
 #' @param print_full If TRUE will print complete path to the file
 #'
@@ -59,7 +59,24 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
   files.newest <- rownames(utils::tail(files.detailed, n = 1))
 
   if (print_full == T) {
-    files.newest <- paste0(designation, files.newest)
+    if(!is.na(subfolder) & is.na(directory)) {
+      files.newest <- here::here(subfolder, files.newest)
+    } else if (is.na(subfolder) & is.na(directory)) {
+      files.newest <- here::here(file.newest)
+
+      # if directory is given, add slash and remove redunant symbols afterwards
+    } else if (!is.na(directory)) {
+
+      # windows and linux directories differ in "/" or "\". change, which symbol will be inserted based on what is found in directory
+      if (length(grep(x = directory, pattern = "/"))) {
+        files.newest <- paste0(designation, "/", files.newest)
+        files.newest <- gsub(pattern = "(/)\\1+", replacement = "/", x = files.newest)
+      } else {
+        files.newest <- paste0(designation, "\\", files.newest)
+        files.newest <- gsub(pattern = "(\\)+", replacement = "\\", x = files.newest, fixed = TRUE)
+      }
+
+    }
   } else if (print_full != T & print_full != F) {
     stop("print_full must be TRUE or FALSE")
   }

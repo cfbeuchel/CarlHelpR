@@ -1,11 +1,11 @@
-CarlHelpR 0.0.26 (Release date: Dezember 18th, 2017)
+CarlHelpR 0.0.27 (Release date: Dezember 18th, 2017)
 =========
 
 Changes in this version:
 ~~~~~~~~~
- * adjust newest_file() and save_csv_carl() to work with windows
+ * fix newest_file() to add/remove "/" in directory path output
 
 Changes in the last version:
 ~~~~~~~~~
- * add option print_full to newest_file to give out full path to file
+ * adjust newest_file() and save_csv_carl() to work with windows
 
