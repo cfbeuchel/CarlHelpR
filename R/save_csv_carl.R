@@ -34,7 +34,7 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
   }
 
   # check if subfolder is a character string
-  if (!is.character(subfolder)) {
+  if (!is.character(subfolder) & !is.na(subfolder)) {
     stop("Please specifiy a character string with a name of an existing subfolder to save the file in!")
   }
 
@@ -44,8 +44,8 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
   } else {
 
     # remove any / in case I forgot that I don't need them
-    subfolder <- gsub(x = subfolder, pattern = "/", replacement = "")
-    save_designation <- paste0(here::here(), "/", subfolder, "/")
+    subfolder <- gsub(x = subfolder, pattern = "\\|/", replacement = "")
+    save_designation <- here::here(subfolder)
   }
 
   # check if given directory exists
@@ -57,10 +57,20 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     dir.create(save_designation)
   }
 
+  # set the complete file_name
+  complete_file_name <- paste0(format(Sys.time(), '%y%m%d'), "_", file_name, ".csv")
+
+  # save in wd
+  if (here::here() == save_designation) {
+    utils::write.table(x = file,
+                       file = here::here(complete_file_name),
+                       sep = "\t", row.names = F)
+
+    # in case of subfolder
+  } else if(here::here() != save_designation & !is.na(subfolder))
+
   # save file as .csv
   utils::write.table(x = file,
-              file = paste0(save_designation,
-                            format(Sys.time(), '%y%m%d'),
-                            "_", file_name, ".csv"),
+              file = here::here(subfolder, complete_file_name),
               sep = "\t", row.names = F)
 }

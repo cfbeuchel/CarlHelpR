@@ -1,6 +1,6 @@
 Package: CarlHelpR
 Title: A Package With Functions 
-Version: 0.0.25
+Version: 0.0.26
 Authors@R: person("Carl", "Beuchel", email = "cfbeuchel@imise.uni-leipzig.de", role = c("aut", "cre"))
 Description: A package where I intend to store convenience functions that help me with my work. Some smart person said, that you should write a functions for every task that you do more than once. Don't repeat yourself and all that.
 Depends: R (>= 3.3.1)

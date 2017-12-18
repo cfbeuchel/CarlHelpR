@@ -27,8 +27,8 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
     } else {
 
       # remove any / in case I forgot that I don't need them
-      subfolder <- gsub(x = subfolder, pattern = "/", replacement = "")
-      designation <- paste0(here::here(), "/", subfolder, "/")
+      subfolder <- gsub(x = subfolder, pattern = "\\|/", replacement = "")
+      designation <- here::here(subfolder)
     }
   } else {
 
