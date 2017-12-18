@@ -53,7 +53,7 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
   files.detailed <- file.info(files.wanted)
 
   # sort by modification date
-  files.ordered <- files.detailed[with(files.detailed, order(as.POSIXct(mtime))), ]
+  files.ordered <- files.detailed[with(files.detailed, order(as.POSIXct(ctime))), ]
 
   # get the newest file from the list
   files.newest <- rownames(utils::tail(files.detailed, n = 1))
@@ -71,11 +71,7 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
       if (length(grep(x = directory, pattern = "/"))) {
         files.newest <- paste0(designation, "/", files.newest)
         files.newest <- gsub(pattern = "(/)\\1+", replacement = "/", x = files.newest)
-      } else {
-        files.newest <- paste0(designation, "\\", files.newest)
-        files.newest <- gsub(pattern = "(\\)+", replacement = "\\", x = files.newest, fixed = TRUE)
       }
-
     }
   } else if (print_full != T & print_full != F) {
     stop("print_full must be TRUE or FALSE")
@@ -83,4 +79,5 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
 
   # return the newest file
   return(files.newest)
+  message(paste0("Newest File: ", files.newest))
 }
