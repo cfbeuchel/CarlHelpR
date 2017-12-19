@@ -62,6 +62,11 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
 
   # save in wd
   if (here::here() == save_designation) {
+
+    # print message
+    message("File will be saved as: ", here::here(complete_file_name))
+
+    # save file as .csv
     utils::write.table(x = file,
                        file = here::here(complete_file_name),
                        sep = "\t", row.names = F)
@@ -69,8 +74,11 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     # in case of subfolder
   } else if(here::here() != save_designation & !is.na(subfolder))
 
-  # save file as .csv
-  utils::write.table(x = file,
-              file = here::here(subfolder, complete_file_name),
-              sep = "\t", row.names = F)
+    # print message
+    message("File will be saved as: ", here::here(subfolder, complete_file_name))
+
+    # save file as .csv
+    utils::write.table(x = file,
+                       file = here::here(subfolder, complete_file_name),
+                       sep = "\t", row.names = F)
 }

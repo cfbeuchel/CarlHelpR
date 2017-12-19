@@ -77,7 +77,8 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
     stop("print_full must be TRUE or FALSE")
   }
 
+  message("Newest File is: ", files.newest)
+
   # return the newest file
   return(files.newest)
-  message(paste0("Newest File: ", files.newest))
 }

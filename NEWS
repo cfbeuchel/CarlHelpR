@@ -1,11 +1,11 @@
-CarlHelpR 0.0.28 (Release date: Dezember 18th, 2017)
+CarlHelpR 0.0.29 (Release date: Dezember 19th, 2017)
 =========
 
 Changes in this version:
 ~~~~~~~~~
- * another fix to newest_file()
+ * print message with file names to be read or saved in newest_message() and save_csv_carl() for doc purposes
 
 Changes in the last version:
 ~~~~~~~~~
- * fix newest_file() to add/remove "/" in directory path output
+ * another fix to newest_file()
 
