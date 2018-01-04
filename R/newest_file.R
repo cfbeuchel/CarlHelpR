@@ -62,7 +62,7 @@ newest_file <- function(look_for = NA, subfolder = NA, directory = NA, print_ful
     if(!is.na(subfolder) & is.na(directory)) {
       files.newest <- here::here(subfolder, files.newest)
     } else if (is.na(subfolder) & is.na(directory)) {
-      files.newest <- here::here(file.newest)
+      files.newest <- here::here(files.newest)
 
       # if directory is given, add slash and remove redunant symbols afterwards
     } else if (!is.na(directory)) {

@@ -2,6 +2,7 @@
 
 export("%nin%")
 export(file_preview)
+export(intersect_all)
 export(make_fdr_stats)
 export(move_col_front)
 export(multiplot)

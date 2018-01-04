@@ -12,7 +12,7 @@ newest_file(look_for = NA, subfolder = NA, directory = NA,
 
 \item{subfolder}{Specify the subfolder to look for the file for when location is the working directory}
 
-\item{directory}{when Files are not in the working directory put the full path to the directory to search through here}
+\item{directory}{when Files are not in the working directory put the full path to the directory to search through here. Does not work with parameter subfolder}
 
 \item{print_full}{If TRUE will print complete path to the file}
 }
