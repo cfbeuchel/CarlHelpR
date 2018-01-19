@@ -16,8 +16,12 @@ duplis <- function(x, index = T) {
   if (length(x) == 0) {
     return(0)
   }
+
+  # rename input
+  my.vec <- x
+
   # create data.table with index
-  dt <- data.table::data.table(my.vec = x, index = 1:length(x))
+  dt <- data.table::data.table(my.vec, index = 1:length(x))
 
   # get the duplicates from R's base duplicated function
   duplicated.values <- dt[duplicated(my.vec), unique(my.vec)]

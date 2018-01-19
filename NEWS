@@ -1,11 +1,11 @@
-CarlHelpR 0.0.31 (Release date: January 19th, 2018)
+CarlHelpR 0.0.32 (Release date: January 19th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* add a function for showing all duplicates
+* fix weird "no global variable" error in duplis()
 
 Changes in the last version:
 ~~~~~~~~~
- * add convenience function intersect_all
- * small typo fix
+* add a function for showing all duplicates
+
