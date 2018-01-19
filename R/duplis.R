@@ -21,17 +21,20 @@ duplis <- function(x, index = T) {
   my.vec <- x
 
   # create data.table with index
-  dt <- data.table::data.table(my.vec, index = 1:length(x))
+  dt <- data.table::data.table(my.vec, index = 1:length(my.vec))
 
   # get the duplicates from R's base duplicated function
-  duplicated.values <- dt[duplicated(my.vec), unique(my.vec)]
+  duplicated.values <- my.vec[duplicated(my.vec)]
+
+  # get the unique duplicates
+  unique.duplicated.values <- unique(duplicated.values)
 
   if(index == T) {
 
     # find all entries matching the duplicated values
-    duplicated.entries <- dt[my.vec %in% duplicated.values]
+    duplicated.entries <- dt[my.vec %in% unique.duplicated.values, ]
 
-    # key by duplicated.entries
+    # # key by duplicated.entries
     data.table::setkey(duplicated.entries, my.vec)
 
     # return index
@@ -41,7 +44,7 @@ duplis <- function(x, index = T) {
   } else if(index == F) {
 
     # find all elements matching the duplicated values
-    duplicates.logical <- is.element(dt$my.vec, duplicated.values)
+    duplicates.logical <- is.element(dt$my.vec, unique.duplicated.values)
 
     #return
     return(duplicates.logical)
