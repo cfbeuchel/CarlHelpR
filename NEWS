@@ -1,12 +1,11 @@
-CarlHelpR 0.0.30 (Release date: January 4th, 2018)
+CarlHelpR 0.0.31 (Release date: January 19th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
- * add convenience function intersect_all
- * small typo fix
+* add a function for showing all duplicates
 
 Changes in the last version:
 ~~~~~~~~~
- * print message with file names to be read or saved in newest_message() and save_csv_carl() for doc purposes
-
+ * add convenience function intersect_all
+ * small typo fix
