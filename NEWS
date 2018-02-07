@@ -1,11 +1,11 @@
-CarlHelpR 0.0.33 (Release date: January 19th, 2018)
+CarlHelpR 0.0.34 (Release date: Febuary 07th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* fix another weird little mistake about data.frames
+* add function change_in_dt. Basically a simple version of str_replace et al
 
 Changes in the last version:
 ~~~~~~~~~
-* fix weird "no global variable" error in duplis()
+* fix another weird little mistake about data.frames
 
