@@ -1,11 +1,12 @@
-CarlHelpR 0.0.34 (Release date: Febuary 07th, 2018)
+CarlHelpR 0.0.35 (Release date: Febuary 07th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* add function change_in_dt. Basically a simple version of str_replace et al
+* add data.table to namespace and @import in change_in_dt function to avoid errors.
+ ° Apparently this is not best practice, but cannot be avoided due to the inability to use data.table::`:=` and data.table::.SD
 
 Changes in the last version:
 ~~~~~~~~~
-* fix another weird little mistake about data.frames
+* add function change_in_dt. Basically a simple version of str_replace et al
 

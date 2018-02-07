@@ -17,6 +17,8 @@
 #' @param change_in_dat Logical. Whether to change 'dat' directly, without returning it.
 #' Defaults to FALSE and thus returns a data.table with the desired changes without changing the input 'dat' directly.
 #'
+#'@import data.table
+#'
 #' @export
 change_in_dt <- function(dat, columns = NA, from, to, stop_missing = TRUE, change_in_dat = FALSE) {
 
