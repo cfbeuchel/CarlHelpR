@@ -2,6 +2,7 @@
 
 export("%nin%")
 export(change_in_dt)
+export(color_dens_area)
 export(duplis)
 export(file_preview)
 export(intersect_all)
