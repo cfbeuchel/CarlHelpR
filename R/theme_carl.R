@@ -10,10 +10,11 @@
 theme_carl <- function() {
   ggplot2::theme_minimal() +
     ggplot2::theme(panel.grid.major = ggplot2::element_blank(),
-        panel.grid.minor = ggplot2::element_line(colour = "black"),
-        panel.border = ggplot2::element_blank(),
+        # panel.grid.major = ggplot2::element_line(colour = "grey50"),
+        # panel.grid.minor = ggplot2::element_line(colour = "grey50"),
         axis.line = ggplot2::element_line(),
         # text = ggplot2::element_text(family = 'Palatino'),
+        panel.border = element_rect(colour = "black", fill=NA, size=1),
         legend.position = 'right'
         )
 }

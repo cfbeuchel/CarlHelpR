@@ -1,13 +1,12 @@
-CarlHelpR 0.0.36 (Release date: March 05th, 2018)
+CarlHelpR 0.0.37 (Release date: March 05th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* add color_dens_area function
-* small changes to theme_carl
+* small change to theme_carl() - add panel border
 
 Changes in the last version:
 ~~~~~~~~~
-* add data.table to namespace and @import in change_in_dt function to avoid errors.
- ° Apparently this is not best practice, but cannot be avoided due to the inability to use data.table::`:=` and data.table::.SD
+* add color_dens_area function
+* small changes to theme_carl
 
