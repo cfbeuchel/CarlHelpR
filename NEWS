@@ -1,12 +1,12 @@
-CarlHelpR 0.0.37 (Release date: March 05th, 2018)
+CarlHelpR 0.0.38 (Release date: May 03rd, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* small change to theme_carl() - add panel border
+* remove old newest_rprofile()
+* add support for remote session via sshfs
 
 Changes in the last version:
 ~~~~~~~~~
-* add color_dens_area function
-* small changes to theme_carl
+* small change to theme_carl() - add panel border
 
