@@ -1,12 +1,11 @@
-CarlHelpR 0.0.39 (Release date: May 28th, 2018)
+CarlHelpR 0.0.40 (Release date: May 28th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* critical fix to change_in_dt to that now correctly greps from and matches numbers
+* update namespace
 
 Changes in the last version:
 ~~~~~~~~~
-* remove old newest_rprofile()
-* add support for remote session via sshfs
+* critical fix to change_in_dt to that now correctly greps from and matches numbers
 
