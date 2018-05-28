@@ -1,12 +1,12 @@
-CarlHelpR 0.0.38 (Release date: May 03rd, 2018)
+CarlHelpR 0.0.39 (Release date: May 28th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* remove old newest_rprofile()
-* add support for remote session via sshfs
+* critical fix to change_in_dt to that now correctly greps from and matches numbers
 
 Changes in the last version:
 ~~~~~~~~~
-* small change to theme_carl() - add panel border
+* remove old newest_rprofile()
+* add support for remote session via sshfs
 

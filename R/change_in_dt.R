@@ -72,9 +72,14 @@ change_in_dt <- function(dat, columns = NA, from, to, stop_missing = TRUE, chang
         x[is.na(x)] <- to
         return(x)
       }), .SDcols = columns][]
+    } else if(is.numeric(from)){
+      dat.dummy[ , (columns) := lapply(.SD, function(x){
+        x[x == (from)] <- to
+        return(x)
+      }), .SDcols = columns][]
     } else {
       dat.dummy[ , (columns) := lapply(.SD, function(x){
-        x[grep(pattern = from, x = x)] <- to
+        x[grep(pattern = paste0("^", from, "$"), x = x)] <- to
         return(x)
       }), .SDcols = columns][]
     }
@@ -89,12 +94,17 @@ change_in_dt <- function(dat, columns = NA, from, to, stop_missing = TRUE, chang
       dat[ , (columns) := lapply(.SD, function(x){
         x[is.na(x)] <- to
         return(x)
-      }), .SDcols = columns]
+      }), .SDcols = columns][]
+    } else if(is.numeric(from)){
+      dat[ , (columns) := lapply(.SD, function(x){
+        x[x == (from)] <- to
+        return(x)
+      }), .SDcols = columns][]
     } else {
       dat[ , (columns) := lapply(.SD, function(x){
-        x[grep(pattern = from, x = x)] <- to
+        x[grep(pattern = paste0("^", from, "$"), x = x)] <- to
         return(x)
-      }), .SDcols = columns]
+      }), .SDcols = columns][]
     }
   }
 }
