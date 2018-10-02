@@ -14,7 +14,9 @@ theme_carl <- function() {
         # panel.grid.minor = ggplot2::element_line(colour = "grey50"),
         axis.line = ggplot2::element_line(),
         # text = ggplot2::element_text(family = 'Palatino'),
-        panel.border = element_rect(colour = "black", fill=NA, size=1),
-        legend.position = 'right'
+        legend.position = 'right',
+        text = element_text(size=15),
+        panel.border = element_blank(),
+        axis.line = element_blank()
         )
 }
