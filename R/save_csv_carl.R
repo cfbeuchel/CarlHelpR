@@ -12,9 +12,13 @@
 #'
 #' @param create_subfolder Given a subfolder, setting this to TRUE will create a new directory with the name given in subfolder and will stop if set to FALSE
 #'
+#' @param sep the field separator string. Values within each row of x are separated by this string.
+#'
+#' @param quote a logical value (TRUE or FALSE) or a numeric vector. If TRUE, any character or factor columns will be surrounded by double quotes. If a numeric vector, its elements are taken as the indices of columns to quote. In both cases, row and column names are quoted if they are written. If FALSE, nothing is quoted.
+#'
 #' @export
 
-save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subfolder = F) {
+save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subfolder = F, sep = ",", quote = F) {
 
   # check if data.table is
   if(!all(is.na(file)) | data.table::is.data.table(file) == F){
@@ -69,7 +73,9 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     # save file as .csv
     utils::write.table(x = file,
                        file = here::here(complete_file_name),
-                       sep = "\t", row.names = F)
+                       sep = sep,
+                       row.names = F,
+                       quote = quote)
 
     # in case of subfolder
   } else if(here::here() != save_designation & !is.na(subfolder))
@@ -80,5 +86,7 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     # save file as .csv
     utils::write.table(x = file,
                        file = here::here(subfolder, complete_file_name),
-                       sep = "\t", row.names = F)
+                       sep = sep,
+                       row.names = F,
+                       quote = quote)
 }
