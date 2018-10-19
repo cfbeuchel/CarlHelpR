@@ -1,11 +1,11 @@
-CarlHelpR 0.0.40 (Release date: May 28th, 2018)
+CarlHelpR 0.0.41 (Release date: October 19th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* update namespace
+* add imise_initialize
 
 Changes in the last version:
 ~~~~~~~~~
-* critical fix to change_in_dt to that now correctly greps from and matches numbers
+* typo fix and changes to save_csv_carl
 

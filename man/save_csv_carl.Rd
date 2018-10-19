@@ -5,7 +5,7 @@
 \title{Custom save to .csv function}
 \usage{
 save_csv_carl(file = NA, file_name = NA, subfolder = NA,
-  create_subfolder = F)
+  create_subfolder = F, sep = ",", quote = F)
 }
 \arguments{
 \item{file}{The data.table or data.frame to be saved.}
@@ -16,6 +16,10 @@ The date of creation and the .csv ending are added automatically}
 \item{subfolder}{A character string without "/" giving the subfolder the file shall be saved in.}
 
 \item{create_subfolder}{Given a subfolder, setting this to TRUE will create a new directory with the name given in subfolder and will stop if set to FALSE}
+
+\item{sep}{the field separator string. Values within each row of x are separated by this string.}
+
+\item{quote}{a logical value (TRUE or FALSE) or a numeric vector. If TRUE, any character or factor columns will be surrounded by double quotes. If a numeric vector, its elements are taken as the indices of columns to quote. In both cases, row and column names are quoted if they are written. If FALSE, nothing is quoted.}
 }
 \description{
 This function saves data.tables or data.frames as .csv in the root working directory or a specified subfolder.
