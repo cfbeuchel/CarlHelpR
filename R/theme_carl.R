@@ -17,6 +17,6 @@ theme_carl <- function() {
         legend.position = 'right',
         text = element_text(size=15),
         panel.border = element_blank(),
-        axis.line = element_blank()
+        axis.line.y = element_blank()
         )
 }
