@@ -71,7 +71,7 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     message("File will be saved as: ", here::here(complete_file_name))
 
     # save file as .csv
-    utils::write.table(x = file,
+    data.table::fwrite(x = file,
                        file = here::here(complete_file_name),
                        sep = sep,
                        row.names = F,
@@ -83,10 +83,10 @@ save_csv_carl <- function(file = NA, file_name = NA, subfolder = NA, create_subf
     # print message
     message("File will be saved as: ", here::here(subfolder, complete_file_name))
 
-    # save file as .csv
-    utils::write.table(x = file,
-                       file = here::here(subfolder, complete_file_name),
-                       sep = sep,
-                       row.names = F,
-                       quote = quote)
+  # save file as .csv
+  data.table::fwrite(x = file,
+                     file = here::here(subfolder, complete_file_name),
+                     sep = sep,
+                     row.names = F,
+                     quote = quote)
 }

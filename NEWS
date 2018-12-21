@@ -1,11 +1,10 @@
-CarlHelpR 0.0.41 (Release date: October 19th, 2018)
+CarlHelpR 0.0.42 (Release date: December 21th, 2018)
 =========
 
 Changes in this version:
 ~~~~~~~~~
-* add imise_initialize
+* fwrite in csv_save_carl
 
 Changes in the last version:
 ~~~~~~~~~
-* typo fix and changes to save_csv_carl
-
+* add imise_initialize
