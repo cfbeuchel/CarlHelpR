@@ -4,7 +4,8 @@
 \alias{venn2}
 \title{2-Way Venn Diagram}
 \usage{
-venn2(x1, y1, mytitle = "2-Way Venn Diagram", mylabels = NA, plotte = T)
+venn2(x1, y1, mytitle = "2-Way Venn Diagram", mylabels = NA,
+  plotte = T)
 }
 \arguments{
 \item{x1}{first vector to be matched}

@@ -4,8 +4,8 @@
 \alias{color_dens_area}
 \title{Color area under density function.}
 \usage{
-color_dens_area(density_function, color_area = c(-3, 3), range_x = c(-3, 3),
-  fill_col = "steelblue", ...)
+color_dens_area(density_function, color_area = c(-3, 3),
+  range_x = c(-3, 3), fill_col = "steelblue", ...)
 }
 \arguments{
 \item{density_function}{The density function to daw. Choose from e.g. http://www.stat.umn.edu/geyer/old/5101/rlook.html}
