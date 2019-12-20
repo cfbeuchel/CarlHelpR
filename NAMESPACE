@@ -3,6 +3,7 @@
 export("%nin%")
 export(change_in_dt)
 export(color_dens_area)
+export(dpx)
 export(duplis)
 export(file_preview)
 export(imise_initialize)
